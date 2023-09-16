@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>flexテスト</title>
+</head>
+<body>
+  <style>
+    /* --ここにcssを記入できます */
+    .container{
+      display: flex;
+    }
+    .box{
+      flex:1;
+    }
+    .box2{
+      flex:3;
+    }
+
+
+    .wrap7{
+      position: relative;
+      width: 300px;
+      height: 90px;
+    }
+    .wrap7 div{
+      position: absolute;
+      height: 30px;
+      width: 100px;
+    }
+    .box1{
+      left: 20px;
+      top: 30px;
+      z-index: 1
+    }
+    .box2{
+      left: 120px;
+      bottom: 20px;
+      z-index: 10;
+    }
+    .box3{
+      top: 25px;
+      right: 20px;
+      z-index: 2;
+    }
+
+
+  </style>
+
+    <!-- --ここにhtmlを記入します-- -->
+    <div class="container">
+      <div class="box">①</div>
+      <div class="box">②</div> 
+    </div>
+
+    <div class="container">
+      <div class="box">①</div>
+      <div class="box2">②</div>
+    </div>
+
+
+    <!-- ただのdivは縦に落ちる -->
+    <div>
+      <div>あいう</div>
+      <div>かきく</div>
+    </div>
+
+    <!-- positionで自由な位置に配置 -->
+    <div class="wrap7">
+      <div class="box1">さしす</div>
+      <div class="box2">たちつ</div>
+    </div>
+
+    <!-- z-indexでの重ね順を考える -->
+    <div class="wrap7">
+      <div class="box2">たちつ</div>
+      <div class="box3">なにぬ</div>
+    </div>
+</body>
+</html>
